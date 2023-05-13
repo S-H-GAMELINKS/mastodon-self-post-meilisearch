@@ -1,0 +1,17 @@
+[package]
+name = "mastodon-self-post-meilisearch"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+megalodon = { version = "0.8" }
+log = "0.4.0"
+env_logger = "0.9.0"
+tokio = { version = "1", features = ["full"] }
+dotenv = "0.15.0"
+meilisearch-sdk = "0.23.1"
+chrono = "*"
+serde = { version = "1.0", features = ["derive"] }
+futures = "0.3" # To be able to block on async functions if you are not using an async runtime
